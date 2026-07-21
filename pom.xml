@@ -20,11 +20,11 @@
     </properties>
 
     <dependencies>
-        <!-- MySQL JDBC Driver (Only dependency needed) -->
+        <!-- MySQL JDBC Driver (Latest version) -->
         <dependency>
             <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.33</version>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.2.0</version>
         </dependency>
     </dependencies>
 
@@ -37,7 +37,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.example.MySQLDatabaseConnection</mainClass>
+                            <mainClass>com.example.util.MySQLDatabaseConnection</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

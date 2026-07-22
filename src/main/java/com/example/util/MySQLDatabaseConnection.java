@@ -10,10 +10,10 @@ import java.sql.SQLException;
  */
 public class MySQLDatabaseConnection {
 
-    private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String URL = System.getenv("$JDBC_URL");
-    private static final String USER = System.getenv("$USERNAME");
-    private static final String PASSWORD = System.getenv("$PASSWORD");
+    private static  String DRIVER = "com.mysql.cj.jdbc.Driver";
+    private static  String URL = System.getenv("$JDBC_URL");
+    private static  String USER = System.getenv("$USERNAME");
+    private static  String PASSWORD = System.getenv("$PASSWORD");
 
     /**
      * Get MySQL database connection

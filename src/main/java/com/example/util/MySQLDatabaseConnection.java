@@ -11,9 +11,9 @@ import java.sql.SQLException;
 public class MySQLDatabaseConnection {
 
     private static final String DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://mysql:3306/testdb";
-    private static final String USER = "root";
-    private static final String PASSWORD = "rootpassword";
+    private static final String URL = System.getenv("$JDBC_URL");
+    private static final String USER = System.getenv("$USERNAME");
+    private static final String PASSWORD = System.getenv("$PASSWORD");
 
     /**
      * Get MySQL database connection
@@ -21,6 +21,7 @@ public class MySQLDatabaseConnection {
      * @return Connection object if successful, null otherwise
      */
     public static Connection getConnection() {
+        System.out.println(URL+"    "+USER+"    "+PASSWORD);
         Connection conn = null;
         try {
             // Load MySQL JDBC driver

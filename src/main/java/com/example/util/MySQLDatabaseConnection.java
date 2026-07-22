@@ -20,8 +20,14 @@ public class MySQLDatabaseConnection {
      * 
      * @return Connection object if successful, null otherwise
      */
+    
     public static Connection getConnection() {
-        System.out.println(URL+"    "+USER+"    "+PASSWORD);
+        System.out.println("======"+URL+"    "+USER+"    "+PASSWORD);
+         DRIVER = "com.mysql.cj.jdbc.Driver";
+     URL = System.getenv("$JDBC_URL");
+    USER = System.getenv("$USERNAME");
+     PASSWORD = System.getenv("$PASSWORD");
+        System.out.println("======"+URL+"    "+USER+"    "+PASSWORD);
         Connection conn = null;
         try {
             // Load MySQL JDBC driver
